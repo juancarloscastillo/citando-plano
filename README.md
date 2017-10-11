@@ -115,12 +115,14 @@ Aquí hay tres cosas que ver: insertar, preview y convert
           - pandoc options: citations
         - en el documento .md crear al principio un YAML header con el path hacia el bib:
 
-        ---
-        bibliography:
-        - '/media/ntfs/Dropbox/zoterojcydocs/MyLibrary.bib'
-        ---
+```
+ ---
+bibliography:
+- '/media/ntfs/Dropbox/zoterojcydocs/MyLibrary.bib'
+---
+```
+    - con esto, luego el MPP muestra las citas (en el preview)
 
-      - con esto, luego el MPP muestra las citas (en el preview)
 
   - Convertir: el paquete pandoc-convert (hasta ahora) no convierte las citas, solo el texto. Lo que funciona es vía linea de comando, abriendo terminal desde atom y:
     - pandoc -s -S --bibliography MyLibrary.bib --filter pandoc-citeproc --csl apa-cv.csl inequality_perception_issp.md -o inequality_perception_issp.html
