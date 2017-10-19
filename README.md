@@ -63,13 +63,13 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
   - Y luego, donde se quiera la bibliografía, (usualmente, alfinal, antes de end(document))
 
   ```
-   \bibliography{micolección}
+   \bibliography{micoleccion}
 ```
   - aquí va el nombre de la colección, cuidado con no darle nombre con espacios, y tampoco terminarla con .bib
   - También se puede indicar con path relativos, ej:
 
 ```
-   \bibliography{../../bib/merit_pref_int}
+   \bibliography{../../bib/micoleccion}
    ```
   - donde "../" es para subir un nivel en la estructura de directorios
   - Con esto, ya se puede comenzar a citar con las distintas opciones; ver <https://gking.harvard.edu/files/natnotes2.pdf>
