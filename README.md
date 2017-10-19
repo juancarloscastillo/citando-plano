@@ -31,7 +31,7 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
 
 **Zotero / BBT**: El funcionamiento de Zotero queda fuera del alcance de este tutorial, solo nos enfocaremos en el vínculo con BBT.
 
-  - Bajar Zotero 5 standalone (<www.zotero.org>)
+  - Bajar Zotero 5 standalone <www.zotero.org>
   - Bajar el archivo para instalar BBT, ultima actualización al 19 oct 2017: <https://github.com/retorquere/zotero-better-bibtex/releases/download/v5.0.28/zotero-better-bibtex-5.0.28.xpi>
   - En Zotero, Tools - Add-ons
   - En la ventana emergente, esquina superior derecha, menú con ícono de tuerca, Install Add-on from file, dar path hacia el archivo xpi de BBT
@@ -40,7 +40,6 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
   - Para revisar las opciones de la sincronización, ir a edit>preferences aparece una pestaña nueva al final a la derecha de BBT. En esa pestaña hay una serie de opciones que luego se pueden explorar, por lo pronto ir a la pestaña "Automatic export" donde debería aparecer en el listado la carpeta seleccionada para exportar. En "automatic export" seleccionar "on change", que hace que cada vez que se cambia algo en Zotero de esa carpeta, se cambia también en el archivo .bib exportado y sincronizado.
   - Más información sobre BBT: <https://github.com/retorquere/zotero-better-bibtex/wiki>
   -  (NOTA: en caso que no funcione, puede ser por problemas exportando con la nueva versión de Zotero (5); la adaptación de BBT se encuentra en desarrollo, ver <https://github.com/retorquere/zotero-better-bibtex/issues/555>); por lo tanto, si hay problemas con la instalación tradicional con el Zotero 5, se recomienda instalar la versión 4 de Zotero Standalone, y bajar la versión previa correspondiente de la extensión <https://github.com/retorquere/zotero-better-bibtex/releases/tag/1.6.100>)
-
 
 ### Sobre exportar referencias en trabajo colaborativo
 
@@ -54,14 +53,14 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
   - En el preambulo (hay diferentes opciones de formato, pero para estilo clásico APA):
 
     - \usepackage{natbib} % for Bibtex
-    - \bibliographystyle{apalike}   % ver por ej otros estilos en https://es.sharelatex.com/learn/Natbib_bibliography_styles
+    - \bibliographystyle{apalike}   % ver por ej otros estilos en <https://es.sharelatex.com/learn/Natbib_bibliography_styles>
     - Y luego, donde se quiera la bibliografía, (usualmente, antes de \end(document)
         - \bibliography{micolección} % aquí va el nombre de la colección, cuidado con no darle nombre con espacios, y tampoco terminarla con .bib
         - También se puede indicar con path relativos, ej: \bibliography{../../bib/merit_pref_int} , donde "../" es para subir un nivel en la estructura de directorios
-    - Con esto, ya se puede comenzar a citar con las distintas opciones (ver https://gking.harvard.edu/files/natnotes2.pdf)
+    - Con esto, ya se puede comenzar a citar con las distintas opciones; ver <https://gking.harvard.edu/files/natnotes2.pdf>
 
 
-  - Para mayores detalles referentes a natbib y en general bibliographic management en Latex ver https://es.sharelatex.com/learn/Bibliography_management_with_natbib
+  - Para mayores detalles referentes a natbib y en general bibliographic management en Latex ver <https://es.sharelatex.com/learn/Bibliography_management_with_natbib>
 
   - Algunos issues con Latex: si se añade alguna cita a la carpeta Zotero, si bien esto es actualizado automáticamente en el bib, no necesariamente es reconocido al momento de citar. Por eso, se recomienda tener abierto el archivo .bib en el editor de tex en otra pestaña, y si la referencia no aparece al intentar citar compilar el bib, esto hace que queden disponibles para citar (lo que se ve en el .bbl, donde se encuentran las referencias citadas en el texto)
     - Por lo visto, las referencias en el .bbl se van sumando, y no se borran. Por lo tanto, puede pasar que se cite algo en alguna ocasión, pero si esa cita se decide borrar va a seguir de todas maneras apareciendo en la bibliografía final. Para ajustar esto, cuando se genere una versión más definitiva del documento, borrar el bbl y compilar el tex nuevamente.
@@ -80,7 +79,7 @@ bibliography:
 ```
 - para citar, se debe escribir el "citation key" de la referencia correspondiente.
 - la lista de referencias aparece automáticamente al final del documento
-- el estilo de bibliografía se debe indicar adicionalmente, basado en un archivo .csl correspondiente.Un listado de estilos disponibles se encuentra en: https://www.zotero.org/styles
+- el estilo de bibliografía se debe indicar adicionalmente, basado en un archivo .csl correspondiente.Un listado de estilos disponibles se encuentra en: <https://www.zotero.org/styles>
 - Luego el csl se agrega al YAML. Ej:
 
 ```
@@ -93,7 +92,7 @@ bibliography:
 
 - Alternativas para automatizar la inserción de referencias:  ya que insertar referencias manualmente es muy engorroso, hay algunas alternativas de automatización que generan un flujo de trabajo similar al de insertar citas y bibliografía en Word/Open Office vía Zotero. El mejor entorno que conozco para hacer esto es Atom, porque sirve tanto para Latex como para Markdown. También hay una forma en Rstudio vía la librería/add-in "citr". Comenzamos con esta:
 
-- Usando Rstudio - citr https://github.com/crsh/citr:
+- Usando Rstudio - citr <https://github.com/crsh/citr>:
   - Al instalar Rmarkdown, se instala automaticamente pandoc al interior de la carpeta de Rstudio (/usr/lib/rstudio/bin/pandoc), donde están los ejecutables pandoc y pandoc-citeproc. Por lo tanto, en archivos Rmd basta dar el nombre del archivo/path al bib  en el YAML header para que encuentre la bibliografía y la compile correctamente.
   - Instalar citr
   - reiniciar
