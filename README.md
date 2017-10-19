@@ -1,5 +1,4 @@
-## Objetivo:
-- poder facilitar la inclusión de citas y referencias bibliográficas en documentos escritos en texto plano (Markdown / Latex).
+### Objetivo: facilitar la inclusión de citas y referencias bibliográficas en documentos escritos en texto plano (Markdown / Latex).
 
 **Juan Carlos Castillo - Instituto de Sociología, Pontificia Universidad Católica de Chile**
 <http://www.jc-castillo.com/>
