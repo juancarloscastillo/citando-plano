@@ -1,6 +1,3 @@
-# citando-plano
-**Vínculos entre Bibtex, Markdown, Latex, Pandoc y Zotero para generar documentos académicos con referencias bibliográficas**
-
 **Juan Carlos Castillo - Instituto de Sociología, Pontificia Universidad Católica de Chile,  [jc-castillo.com](jc-castillo.com)**
 
 **Objetivo**: poder facilitar la inclusión de citas y referencias bibliográficas en documentos escritos en texto plano (Markdown / Latex).
