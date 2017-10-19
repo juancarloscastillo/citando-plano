@@ -31,7 +31,10 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
 
 **Zotero / BBT**: El funcionamiento de Zotero queda fuera del alcance de este tutorial, solo nos enfocaremos en el vínculo con BBT.
 
-  - instalar siguiendo las instrucciones: https://github.com/retorquere/zotero-better-bibtex/wiki  (NOTA: se han reportado problemas exportando con la nueva versión de Zotero (5); la adaptación de BBT se encuentra en desarrollo, ver https://github.com/retorquere/zotero-better-bibtex/issues/555); por lo tanto, si hay problemas con la instalación tradicional con el Zotero 5, se recomienda instalar la versión 4 de Zotero Standalone, y bajar la versión previa correspondiente de la extensión https://github.com/retorquere/zotero-better-bibtex/releases/tag/1.6.100)
+  - instalar siguiendo las instrucciones: [https://github.com/retorquere/zotero-better-bibtex/wiki]  (NOTA: se han reportado problemas exportando con la nueva versión de Zotero (5); la adaptación de BBT se encuentra en desarrollo, ver https://github.com/retorquere/zotero-better-bibtex/issues/555); por lo tanto, si hay problemas con la instalación tradicional con el Zotero 5, se recomienda instalar la versión 4 de Zotero Standalone, y bajar la versión previa correspondiente de la extensión https://github.com/retorquere/zotero-better-bibtex/releases/tag/1.6.100)
+  - Test al 19 Octubre: funciona con Zotero 5, instrucciones
+    - instalar Zotero standalone (https://www.zotero.org/)
+    -
   - recordar reiniciar Zotero para que la instalación se complete.
   - Ahora, si se quiere exportar a bib, basta solamente posicionarse sobre una carpeta (que también puede ser la colección completa), botón derecho, export collection, y en el formato escoger "Better BibTex". Luego escoger directorio donde se graba (que puede ser el mismo de Zotero).
   - Para revisar las opciones de la sincronización, ir a edit>preferences aparece una pestaña nueva al final a la derecha de BBT. En esa pestaña hay una serie de opciones que luego se pueden explorar, por lo pronto ir a la pestaña "Automatic export" donde debería aparecer en el listado la carpeta seleccionada para exportar. En "automatic export" seleccionar "on change", que hace que cada vez que se cambia algo en Zotero de esa carpeta, se cambia también en el archivo .bib exportado y sincronizado.
