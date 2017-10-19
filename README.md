@@ -27,17 +27,20 @@ La forma general como funciona la inclusión de referencias en texto plano (Late
 
 Luego, en la primera línea aparece la "clave" (key) de la referencia (en este caso sabbagh_dimension_2003), que permite llamarla en el texto como veremos más adelante.
 
-Por supuesto, almacenar manualmente referencias en este formato bib no es muy amigable. Si bien una serie de softwares de administración de referencias tienen la opción de convertir fácilmente la colección o parte de ella a formato .bib, el problema es que si se añade una referencia en el software, cada vez habría que convertir/sincronizar nuevamente a .bib para mantener esta base también actualizada. Por lo tanto, lo ideal sería que una colección .bib se actualizara automáticamente desde un software de gestión de referencias. La solución que por ahora se recomienda es usar la aplicación Better(bib)tex (BBT), que funciona dentro de Zotero (www.zotero.org). Ambos gratuitos y de código abierto, así que ok.
+Por supuesto, almacenar manualmente referencias en este formato bib no es muy amigable. Si bien una serie de softwares de administración de referencias tienen la opción de convertir fácilmente la colección o parte de ella a formato .bib, el problema es que si se añade una referencia en el software, cada vez habría que convertir/sincronizar nuevamente a .bib para mantener esta base también actualizada. Por lo tanto, lo ideal sería que una colección .bib se actualizara automáticamente desde un software de gestión de referencias. La solución que por ahora se recomienda es usar la aplicación Better(bib)tex (BBT), que funciona dentro de Zotero (www.zotero.org). Ambos gratuitos y de código abierto, así que ok. BBT genera una colección .bib en base a librerías Zotero, se configura solo una vez y luego se mantiene sincronizada, para no preocuparse más del asunto.
 
 **Zotero / BBT**: El funcionamiento de Zotero queda fuera del alcance de este tutorial, solo nos enfocaremos en el vínculo con BBT.
 
-  - instalar siguiendo las instrucciones: [https://github.com/retorquere/zotero-better-bibtex/wiki]  (NOTA: se han reportado problemas exportando con la nueva versión de Zotero (5); la adaptación de BBT se encuentra en desarrollo, ver https://github.com/retorquere/zotero-better-bibtex/issues/555); por lo tanto, si hay problemas con la instalación tradicional con el Zotero 5, se recomienda instalar la versión 4 de Zotero Standalone, y bajar la versión previa correspondiente de la extensión https://github.com/retorquere/zotero-better-bibtex/releases/tag/1.6.100)
-  - Test al 19 Octubre: funciona con Zotero 5, instrucciones
-    - instalar Zotero standalone (https://www.zotero.org/)
-    -
-  - recordar reiniciar Zotero para que la instalación se complete.
-  - Ahora, si se quiere exportar a bib, basta solamente posicionarse sobre una carpeta (que también puede ser la colección completa), botón derecho, export collection, y en el formato escoger "Better BibTex". Luego escoger directorio donde se graba (que puede ser el mismo de Zotero).
+  - Bajar Zotero 5 standalone (<www.zotero.org>)
+  - Bajar el archivo para instalar BBT, ultima actualización al 19 oct 2017: <https://github.com/retorquere/zotero-better-bibtex/releases/download/v5.0.28/zotero-better-bibtex-5.0.28.xpi>
+  - En Zotero, Tools - Add-ons
+  - En la ventana emergente, esquina superior derecha, menú con ícono de tuerca, Install Add-on from file, dar path hacia el archivo xpi de BBT
+  - Reiniciar Zotero
+  - Exportando / sincronizando con archivo Bib: basta solamente posicionarse sobre una carpeta de referencias de Zotero (que también puede ser la colección completa), botón derecho, export collection, y en el formato escoger "Better BibTex". Luego escoger directorio donde se graba (que puede ser el mismo de Zotero).
   - Para revisar las opciones de la sincronización, ir a edit>preferences aparece una pestaña nueva al final a la derecha de BBT. En esa pestaña hay una serie de opciones que luego se pueden explorar, por lo pronto ir a la pestaña "Automatic export" donde debería aparecer en el listado la carpeta seleccionada para exportar. En "automatic export" seleccionar "on change", que hace que cada vez que se cambia algo en Zotero de esa carpeta, se cambia también en el archivo .bib exportado y sincronizado.
+  - Más información sobre BBT: <https://github.com/retorquere/zotero-better-bibtex/wiki>
+  -  (NOTA: en caso que no funcione, puede ser por problemas exportando con la nueva versión de Zotero (5); la adaptación de BBT se encuentra en desarrollo, ver <https://github.com/retorquere/zotero-better-bibtex/issues/555>); por lo tanto, si hay problemas con la instalación tradicional con el Zotero 5, se recomienda instalar la versión 4 de Zotero Standalone, y bajar la versión previa correspondiente de la extensión <https://github.com/retorquere/zotero-better-bibtex/releases/tag/1.6.100>)
+
 
 ### Sobre exportar referencias en trabajo colaborativo
 
