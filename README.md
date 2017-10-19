@@ -31,12 +31,15 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
 
 **Zotero / BBT**: El funcionamiento de Zotero queda fuera del alcance de este tutorial, solo nos enfocaremos en el vínculo con BBT.
 
-  - Bajar Zotero 5 standalone <www.zotero.org>
+  - Bajar Zotero 5 standalone <https://www.zotero.org/>
   - Bajar el archivo para instalar BBT, ultima actualización al 19 oct 2017: <https://github.com/retorquere/zotero-better-bibtex/releases/download/v5.0.28/zotero-better-bibtex-5.0.28.xpi>
   - En Zotero, Tools - Add-ons
   - En la ventana emergente, esquina superior derecha, menú con ícono de tuerca, Install Add-on from file, dar path hacia el archivo xpi de BBT
   - Reiniciar Zotero
-  - Exportando / sincronizando con archivo Bib: basta solamente posicionarse sobre una carpeta de referencias de Zotero (que también puede ser la colección completa), botón derecho, export collection, y en el formato escoger "Better BibTex". Luego escoger directorio donde se graba (que puede ser el mismo de Zotero).
+  - Exportando / sincronizando con archivo Bib:
+    - posicionarse sobre una carpeta de referencias de Zotero (que también puede ser la colección completa, o sea My Library), botón derecho, export collection, y en el formato escoger "Better BibTex".
+    - En las "translator options" marcar "keep updated", que sincroniza el bib en cuanto se agrega una referencia a Zotero
+      - Luego escoger directorio donde se graba (que puede ser el mismo de Zotero). Se recomienda que el nombre del archivo no lleve espacios.
   - Para revisar las opciones de la sincronización, ir a edit>preferences aparece una pestaña nueva al final a la derecha de BBT. En esa pestaña hay una serie de opciones que luego se pueden explorar, por lo pronto ir a la pestaña "Automatic export" donde debería aparecer en el listado la carpeta seleccionada para exportar. En "automatic export" seleccionar "on change", que hace que cada vez que se cambia algo en Zotero de esa carpeta, se cambia también en el archivo .bib exportado y sincronizado.
   - Más información sobre BBT: <https://github.com/retorquere/zotero-better-bibtex/wiki>
   -  (NOTA: en caso que no funcione, puede ser por problemas exportando con la nueva versión de Zotero (5); la adaptación de BBT se encuentra en desarrollo, ver <https://github.com/retorquere/zotero-better-bibtex/issues/555>); por lo tanto, si hay problemas con la instalación tradicional con el Zotero 5, se recomienda instalar la versión 4 de Zotero Standalone, y bajar la versión previa correspondiente de la extensión <https://github.com/retorquere/zotero-better-bibtex/releases/tag/1.6.100>)
@@ -45,19 +48,31 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
 
 - Aquí, una opción es dar el link desde Markdown/Latex al archivo completo de Zotero (del autor a cargo), pero en general es muy pesado y contiene todas las referencias, no el subgrupo que se utiliza en el paper. Por lo tanto, se recomienda hacer lo siguiente:
     -  crear una colección/carpeta compartida de Zotero (asumiendo escenario de trabajo colaborativo) donde se copian las referencias que se utilizan en el paper. Esto es fácil en Zotero, solo se arrastran, y no hace que toda la información se duplique, es solo un link. Como es compartida, cualquier miembro del equipo puede modificar. Precaución: el nombre de esta carpeta sin espacios y sin acentos
-    - El coordinador/primer autor exporta esta colección a la carpeta del proyecto colaborativo (eventualmente un dropbox) donde está el tex/md. Para ello, botón derecho sobre la carpeta, "export library", seleccionar *format Better Bibtex*, y muy importante: check box "keep updated", así cualquier cambio que se haga en la colección desde Zotero se reflejará en el .bib. Guardar en la carpeta donde se encuentra el archivo tex
-    - Luego, revisar en la pestaña de BBT de preferencias, en automatic export, que la carpeta efectivamente está en el listado. Además, marcar la opción "on change", así apenas se actualice la librería de Zotero se va a actualizar el bib
-
+    - El coordinador/primer autor exporta esta colección a la carpeta del proyecto colaborativo (eventualmente un dropbox) donde está el tex/md. Para ello, botón derecho sobre la carpeta, "export library", seleccionar *format Better Bibtex*, y nuevamente, muy importante: check box "keep updated", así cualquier cambio que se haga en la colección desde Zotero se reflejará en el .bib. Guardar en la carpeta donde se encuentra el archivo tex
+    - Luego, revisar en la pestaña de BBT de preferencias, en automatic export, que la carpeta efectivamente está en el listado. Además, marcar la opción "on change".
+    -
 ## Referenciando en TEX
 
-  - En el preambulo (hay diferentes opciones de formato, pero para estilo clásico APA):
+  - En el preámbulo (hay diferentes opciones de formato, pero para estilo clásico APA):
 
-    - \usepackage{natbib} % for Bibtex
-    - \bibliographystyle{apalike}   % ver por ej otros estilos en <https://es.sharelatex.com/learn/Natbib_bibliography_styles>
-    - Y luego, donde se quiera la bibliografía, (usualmente, antes de \end(document)
-        - \bibliography{micolección} % aquí va el nombre de la colección, cuidado con no darle nombre con espacios, y tampoco terminarla con .bib
-        - También se puede indicar con path relativos, ej: \bibliography{../../bib/merit_pref_int} , donde "../" es para subir un nivel en la estructura de directorios
-    - Con esto, ya se puede comenzar a citar con las distintas opciones; ver <https://gking.harvard.edu/files/natnotes2.pdf>
+  ```
+  \usepackage{natbib} % for Bibtex
+  \bibliographystyle{apalike}
+  ```
+  - ver por ej otros estilos en <https://es.sharelatex.com/learn/Natbib_bibliography_styles>
+  - Y luego, donde se quiera la bibliografía, (usualmente, alfinal, antes de end(document))
+
+  ```
+   \bibliography{micolección}
+```
+  - aquí va el nombre de la colección, cuidado con no darle nombre con espacios, y tampoco terminarla con .bib
+  - También se puede indicar con path relativos, ej:
+
+```
+   \bibliography{../../bib/merit_pref_int}
+   ```
+  - donde "../" es para subir un nivel en la estructura de directorios
+  - Con esto, ya se puede comenzar a citar con las distintas opciones; ver <https://gking.harvard.edu/files/natnotes2.pdf>
 
 
   - Para mayores detalles referentes a natbib y en general bibliographic management en Latex ver <https://es.sharelatex.com/learn/Bibliography_management_with_natbib>
