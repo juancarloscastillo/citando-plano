@@ -1,6 +1,8 @@
+# Citando plano
+
 **Juan Carlos Castillo - Instituto de Sociología, Pontificia Universidad Católica de Chile**
 
-<jc-castillo.com>
+<http://www.jc-castillo.com/>
 
 **Objetivo**: poder facilitar la inclusión de citas y referencias bibliográficas en documentos escritos en texto plano (Markdown / Latex).
 
