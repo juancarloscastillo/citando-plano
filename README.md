@@ -1,4 +1,5 @@
 **Juan Carlos Castillo - Instituto de Sociología, Pontificia Universidad Católica de Chile**
+
 <jc-castillo.com>
 
 **Objetivo**: poder facilitar la inclusión de citas y referencias bibliográficas en documentos escritos en texto plano (Markdown / Latex).
@@ -48,7 +49,8 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
     -  crear una colección/carpeta compartida de Zotero (asumiendo escenario de trabajo colaborativo) donde se copian las referencias que se utilizan en el paper. Esto es fácil en Zotero, solo se arrastran, y no hace que toda la información se duplique, es solo un link. Como es compartida, cualquier miembro del equipo puede modificar. Precaución: el nombre de esta carpeta sin espacios y sin acentos
     - El coordinador/primer autor exporta esta colección a la carpeta del proyecto colaborativo (eventualmente un dropbox) donde está el tex/md. Para ello, botón derecho sobre la carpeta, "export library", seleccionar *format Better Bibtex*, y nuevamente, muy importante: check box "keep updated", así cualquier cambio que se haga en la colección desde Zotero se reflejará en el .bib. Guardar en la carpeta donde se encuentra el archivo tex
     - Luego, revisar en la pestaña de BBT de preferencias, en automatic export, que la carpeta efectivamente está en el listado. Además, marcar la opción "on change".
-    -
+
+
 ## Referenciando en TEX
 
   - En el preámbulo (hay diferentes opciones de formato, pero para estilo clásico APA):
@@ -57,18 +59,20 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
   \usepackage{natbib} % for Bibtex
   \bibliographystyle{apalike}
   ```
+
   - ver por ej otros estilos en <https://es.sharelatex.com/learn/Natbib_bibliography_styles>
   - Y luego, donde se quiera la bibliografía, (usualmente, alfinal, antes de end(document))
 
-  ```
-   \bibliography{micoleccion}
+```
+\bibliography{micoleccion}
 ```
   - aquí va el nombre de la colección, cuidado con no darle nombre con espacios, y tampoco terminarla con .bib
   - También se puede indicar con path relativos, ej:
 
 ```
-   \bibliography{../../bib/micoleccion}
-   ```
+ \bibliography{../../bib/micoleccion}
+```
+
   - donde "../" es para subir un nivel en la estructura de directorios
   - Con esto, ya se puede comenzar a citar con las distintas opciones; ver <https://gking.harvard.edu/files/natnotes2.pdf>
 
@@ -90,6 +94,7 @@ bibliography:
 - 'MyLibrary.bib'
 ---
 ```
+
 - para citar, se debe escribir el "citation key" de la referencia correspondiente.
 - la lista de referencias aparece automáticamente al final del documento
 - el estilo de bibliografía se debe indicar adicionalmente, basado en un archivo .csl correspondiente.Un listado de estilos disponibles se encuentra en: <https://www.zotero.org/styles>
@@ -101,6 +106,7 @@ bibliography:
 - MyLibrary.bib
 - csl: apa.csl
 ---
+
 ```
 
 - Alternativas para automatizar la inserción de referencias:  ya que insertar referencias manualmente es muy engorroso, hay algunas alternativas de automatización que generan un flujo de trabajo similar al de insertar citas y bibliografía en Word/Open Office vía Zotero. El mejor entorno que conozco para hacer esto es Atom, porque sirve tanto para Latex como para Markdown. También hay una forma en Rstudio vía la librería/add-in "citr". Comenzamos con esta:
@@ -134,12 +140,13 @@ Aquí hay tres cosas que ver: insertar, preview y convert
         - en el documento .md crear al principio un YAML header con el path hacia el bib:
 
 ```
- ---
+---
 bibliography:
 - '/media/ntfs/Dropbox/zoterojcydocs/MyLibrary.bib'
 ---
 ```
-    - con esto, luego el MPP muestra las citas (en el preview)
+
+  - con esto, luego el MPP muestra las citas (en el preview)
 
 
   - Convertir: el paquete pandoc-convert (hasta ahora) no convierte las citas, solo el texto. Lo que funciona es vía linea de comando, abriendo terminal desde atom y:
