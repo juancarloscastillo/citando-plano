@@ -77,8 +77,9 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
   - donde "../" es para subir un nivel en la estructura de directorios
   - Con esto, ya se puede comenzar a citar con las distintas opciones; ver <https://gking.harvard.edu/files/natnotes2.pdf>
 
+- Y también se puede creando un link simbólico en la carpeta respectiva que apunte hacia el archivo .bib de la carpeta Zotero, de esa manera no es necesario especificar la ruta.
 
-  - Para mayores detalles referentes a natbib y en general bibliographic management en Latex ver <https://es.sharelatex.com/learn/Bibliography_management_with_natbib>
+- Para mayores detalles referentes a natbib y en general bibliographic management en Latex ver <https://es.sharelatex.com/learn/Bibliography_management_with_natbib>
 
   - Algunos issues con Latex: si se añade alguna cita a la carpeta Zotero, si bien esto es actualizado automáticamente en el bib, no necesariamente es reconocido al momento de citar. Por eso, se recomienda tener abierto el archivo .bib en el editor de tex en otra pestaña, y si la referencia no aparece al intentar citar compilar el bib, esto hace que queden disponibles para citar (lo que se ve en el .bbl, donde se encuentran las referencias citadas en el texto)
     - Por lo visto, las referencias en el .bbl se van sumando, y no se borran. Por lo tanto, puede pasar que se cite algo en alguna ocasión, pero si esa cita se decide borrar va a seguir de todas maneras apareciendo en la bibliografía final. Para ajustar esto, cuando se genere una versión más definitiva del documento, borrar el bbl y compilar el tex nuevamente.
