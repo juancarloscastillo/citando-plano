@@ -31,7 +31,7 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
 
   - Bajar Zotero 5 standalone <https://www.zotero.org/>
   - Bajar el archivo para instalar BBT, ultima actualización al 19 oct 2017: <https://github.com/retorquere/zotero-better-bibtex/releases/download/v5.0.28/zotero-better-bibtex-5.0.28.xpi>
-  - En Zotero, Tools - Add-ons
+  - En Zotero, Tools - Add-ons 
   - En la ventana emergente, esquina superior derecha, menú con ícono de tuerca, Install Add-on from file, dar path hacia el archivo xpi de BBT
   - Reiniciar Zotero
   - Exportando / sincronizando con archivo Bib:
