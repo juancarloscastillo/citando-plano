@@ -3,6 +3,7 @@
 **Juan Carlos Castillo - Instituto de Sociología, Pontificia Universidad Católica de Chile**
 <http://www.jc-castillo.com/>
 
+
 ## Bibtex, Zotero y Beter BibTex (BBT)
 
 La forma general como funciona la inclusión de referencias en texto plano (Latex/Markdown) es tenerlas almacenadas en formato Bibtex (archivos en extensión .bib). Este formato almacena las referencias en base a ciertos campos donde se incluye la información correspondiente. Por ejemplo:
@@ -31,7 +32,7 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
 
   - Bajar Zotero 5 standalone <https://www.zotero.org/>
   - Bajar el archivo para instalar BBT, ultima actualización al 19 oct 2017: <https://github.com/retorquere/zotero-better-bibtex/releases/download/v5.0.28/zotero-better-bibtex-5.0.28.xpi>
-  - En Zotero, Tools - Add-ons 
+  - En Zotero, Tools - Add-ons
   - En la ventana emergente, esquina superior derecha, menú con ícono de tuerca, Install Add-on from file, dar path hacia el archivo xpi de BBT
   - Reiniciar Zotero
   - Exportando / sincronizando con archivo Bib:
@@ -58,8 +59,9 @@ Por supuesto, almacenar manualmente referencias en este formato bib no es muy am
   \usepackage{natbib} % for Bibtex
   \bibliographystyle{apalike}
   ```
-
-  - ver por ej otros estilos en <https://es.sharelatex.com/learn/Natbib_bibliography_styles>
+  - algunos estilos vienen por defecto, si no se pueden bajar en:  <https://es.sharelatex.com/learn/Natbib_bibliography_styles>
+  - si el estilo no está por defecto, guardar en la carpeta donde se encuentra el .bib
+  - obligatorio: tiene que definirse un estilo para que funcione la compilación de la bibliografía (al menos esa fue mi experiencia)
   - Y luego, donde se quiera la bibliografía, (usualmente, alfinal, antes de end(document))
 
 ```
