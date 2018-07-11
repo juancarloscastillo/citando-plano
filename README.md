@@ -127,22 +127,23 @@ El problema: para generar el html no pasa por pandoc, así que no sigue la misma
 
 1. Indicar paquete y librería: en un chunk de setup luego del YAML header. La librería se indica con la función ReadBib de RefManageR (en este caso, en el mismo directorio, si no dar el path)
 
-```
+``` {r results=ASIS, evaluate=FALSE}
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = TRUE)
 pacman::p_load(RefManageR)
 bib <- ReadBib("merit_pref_int.bib", check = FALSE)
-```
+$```$
 ```
 
 2. Para citar: los comandos básicos del RefManageR son Cite(), Citep() y Citet() (como en natbib), y en el paréntesis va el nombre del objeto generado antes y que contiene las referencias (bib) y la clave de la referencia como está en el Bibtex. Ejemplo: Cite(bib, "castillo_2018"). Ahora, como se trata de compilar a html sin pasar por pandoc, hay que dar la instrucción para que R/RefManageR hagan el trabajo, así que la cita se escribe en un mini-chunk de código: `r Cite (bib, "castillo_2018")`
 
 3. Para generar las referencias: en la lámina que corresponde, incluir:
 
+
 ```{r, results='asis', echo=FALSE}
 PrintBibliography(bib)
+$```$
 ```
-
 ## Usando Atom para flujo de trabajo académico en texto plano con citas
 
 Aquí hay tres cosas que ver: insertar, preview y convert
